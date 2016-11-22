@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rLayout_Cover"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <ImageView
+            android:id="@+id/imgVw_CoverImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_person_black_24dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rLayout_Profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="204dp"
+        android:background="@color/cardview_dark_background">
+        <ImageView
+            android:id="@+id/imgVw_ProfilePicImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/ic_person_black_24dp"/>
+
+    </RelativeLayout>
+
+    <!--android:layout_marginEnd="22dp"
+    android:layout_marginRight="22dp"
+    android:layout_marginTop="204dp"-->
+
+    <RelativeLayout
+        android:id="@+id/rLayout_UserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rLayout_Cover">
+        <TextView
+            android:id="@+id/txtVw_lbl_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:text="UserName :"
+            android:textColor="#303030"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtVw_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/txtVw_lbl_UserName"
+            android:text="No Value"
+            android:textColor="#303030"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+    <!--Show user Data from API-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rLayout_Profile">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_fname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="First Name"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_fName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_lname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Last Name"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_lName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_mPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Medium Path"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_mPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_tPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Thumb Path"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_tPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_cPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Cover Path"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_cPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_profpicname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Profile Picture Name"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_profpicname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_coverpicname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Cover Picture Name"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_coverpicname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="12sp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <TextView
+                android:id="@+id/txtVw_lbl_Token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Login Token"
+                android:textColor="#303030"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtVw_Token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Value"
+                android:textColor="#303030"
+                android:textSize="8sp"/>
+        </TableRow>
+
+        <TableRow android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1">
+            <Button
+                android:id="@+id/btn_getValues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Get  MyProfile"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"/>
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>
